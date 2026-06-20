@@ -82,6 +82,7 @@
   .wnum { font-weight: 800; border-radius: 8px; display: flex; align-items: center; justify-content: center;
     height: 3.2vh; min-width: 3.2vh; padding: 0 5px; font-size: 2.3vh; touch-action: none; cursor: grab; }
   .divider { width: 3px; align-self: stretch; min-height: 4.5vh; margin: 0 4px; border-radius: 2px; background: rgba(0,0,0,.22); }
+  .wait-col { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
   .wait-label { font-size: 1.7vh; font-weight: 700; opacity: .65; margin: 0 2px; }
   .num.tile-over, .wnum.tile-over { outline: 3px dashed #ffd43b; outline-offset: 2px; }
   .num.dragsrc, .wnum.dragsrc { opacity: .3; }
@@ -276,7 +277,7 @@
         if (idx < cs) playTiles += tile; else waitTiles += tile;
       });
       const courtInner = '<div class="play-grp">' + playTiles + '</div>' +
-        (waitTiles ? '<div class="divider"></div><span class="wait-label">대기</span><div class="wait-grp">' + waitTiles + '</div>' : '');
+        (waitTiles ? '<div class="divider"></div><div class="wait-col"><span class="wait-label">대기</span><div class="wait-grp">' + waitTiles + '</div></div>' : '');
       const statusHtml = resting
         ? '<span class="status">휴식</span>'
         : '<span class="status">코트</span>';
