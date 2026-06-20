@@ -86,7 +86,7 @@
   .pm { font-size: 2.6vh; font-weight: 700; border: none; border-radius: 10px; width: 40px;
     background: rgba(0,0,0,.30); color: #fff; }
 
-  .court { flex: 1 1 auto; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; min-height: 0; }
+  .court { flex: 1 1 auto; display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; min-height: 0; }
   .play-grp, .wait-grp { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
   .num { font-weight: 800; border-radius: 12px; display: flex; align-items: center; justify-content: center;
     height: 8.5vh; min-width: 8.5vh; padding: 0 6px; font-size: 6vh; touch-action: none; cursor: grab; }
@@ -94,8 +94,6 @@
     height: 3.2vh; min-width: 3.2vh; padding: 0 5px; font-size: 2.3vh; touch-action: none; cursor: grab; }
   .divider { width: 3px; align-self: stretch; min-height: 4.5vh; margin: 0 4px; border-radius: 2px; background: rgba(0,0,0,.22); }
   .wait-col { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
-  body.fs .court { flex-direction: column; align-items: flex-start; gap: 6px; }
-  body.fs .divider { display: none; }
   .wait-label { font-size: 1.7vh; font-weight: 700; opacity: .65; margin: 0 2px; }
   .num.tile-over, .wnum.tile-over { outline: 3px dashed #ffd43b; outline-offset: 2px; }
   .num.dragsrc, .wnum.dragsrc { opacity: .3; }
