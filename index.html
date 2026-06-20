@@ -53,10 +53,12 @@
     min-height: 0; transition: opacity .15s; position: relative; }
   .team.rest .court { opacity: .4; }
   .team.rest { filter: saturate(.7); }
-  .team.playing { z-index: 1; animation: neonPulse 1.5s ease-in-out infinite; }
-  @keyframes neonPulse {
-    0%, 100% { box-shadow: 0 0 0 3px #eafff2, 0 0 14px 4px #2bff88, 0 0 26px 7px rgba(43,255,136,.5); }
-    50%      { box-shadow: 0 0 0 3px #ffffff, 0 0 22px 7px #2bff88, 0 0 42px 13px rgba(43,255,136,.8); }
+  .team.playing { z-index: 1; }
+  .team.playing .play-grp { border: 3px solid #00e5ff; border-radius: 12px; padding: 5px;
+    animation: neonCyan 1.2s ease-in-out infinite; }
+  @keyframes neonCyan {
+    0%, 100% { box-shadow: 0 0 10px 3px #00e5ff, inset 0 0 8px rgba(0,229,255,.4); }
+    50%      { box-shadow: 0 0 22px 8px #00e5ff, inset 0 0 13px rgba(0,229,255,.78); }
   }
   .nextup { position: absolute; right: 14px; bottom: 10px; font-size: 1.6vh; font-weight: 800;
     padding: 3px 12px; border-radius: 20px; background: #ffd43b; color: #3a2d00;
