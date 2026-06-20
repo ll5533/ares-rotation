@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#111111">
-<title>농구 로테이션</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>ARES 농구 로테이션</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html, body { height: 100%; background: #111; color: #fff;
@@ -155,6 +160,7 @@
     <div style="display:flex; gap:8px; align-items:center; flex:0 0 auto;">
       <button class="tbtn" id="trashBtn">🗑 <span id="trashCount">0</span></button>
       <button class="tbtn" id="cfgBtn">설정</button>
+      <button class="tbtn" id="fsBtn">⛶</button>
       <button class="tbtn" id="helpBtn">？</button>
     </div>
   </div>
@@ -404,6 +410,15 @@
     document.getElementById("help").classList.add("show"));
   document.getElementById("helpClose").addEventListener("click", () =>
     document.getElementById("help").classList.remove("show"));
+  document.getElementById("fsBtn").addEventListener("click", function () {
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen) document.exitFullscreen();
+    } else {
+      var el = document.documentElement;
+      if (el.requestFullscreen) el.requestFullscreen().catch(function () {});
+      else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    }
+  });
   document.getElementById("trashBtn").addEventListener("click", () => {
     document.getElementById("restorePanel").classList.toggle("show");
   });
