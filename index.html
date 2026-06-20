@@ -90,7 +90,8 @@
   .play-grp { display: flex; align-items: center; gap: 7px; flex-wrap: nowrap; }
   .wait-grp { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
   .num { font-weight: 800; border-radius: 12px; display: flex; align-items: center; justify-content: center;
-    height: 8.5vh; min-width: 8.5vh; padding: 0 6px; font-size: 6vh; touch-action: none; cursor: grab; }
+    width: min(8.5vh, 14.5vw); height: min(8.5vh, 14.5vw); padding: 0; font-size: min(6vh, 9vw);
+    flex: 0 0 auto; touch-action: none; cursor: grab; }
   .wnum { font-weight: 800; border-radius: 8px; display: flex; align-items: center; justify-content: center;
     height: 3.2vh; min-width: 3.2vh; padding: 0 5px; font-size: 2.3vh; touch-action: none; cursor: grab; }
   .divider { width: 3px; align-self: stretch; min-height: 4.5vh; margin: 0 4px; border-radius: 2px; background: rgba(0,0,0,.22); }
